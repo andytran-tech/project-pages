@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy Tran | Engineering Projects & DIY Hub</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800 transition-colors duration-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                
+                <!-- Brand Title -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="group flex items-center gap-2 text-slate-100 hover:text-cyan-400 transition-colors">
+                        <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-105 group-hover:border-cyan-400 transition-all">
+                            <i class="fa-solid font-mono font-bold text-sm">&lt;/&gt;</i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold tracking-tight text-lg leading-none">Andy Tran</span>
+                            <span class="text-xs text-slate-400 font-mono tracking-wider mt-1">ENGINEERING LAB</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <!-- Back to Resume Button -->
+                    <a href="https://andytran-tech.github.io/resume/" class="inline-flex items-center gap-2 px-3.5 py-2 text-sm font-medium text-slate-200 bg-slate-900 border border-slate-700 rounded-lg hover:bg-slate-800 hover:text-cyan-400 hover:border-cyan-500/50 transition-all shadow-sm">
+                        <i class="fa-solid fa-arrow-left text-xs text-cyan-400"></i>
+                        <span>Back to Resume</span>
+                    </a>
+
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" aria-label="Toggle Theme" class="p-2.5 text-slate-400 hover:text-amber-400 dark:hover:text-amber-300 bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-lg transition-colors">
+                        <i class="fa-solid fa-sun hidden dark:block text-amber-400 text-base"></i>
+                        <i class="fa-solid fa-moon block dark:hidden text-slate-700 text-base"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        
+        <!-- Hero Section -->
+        <section class="mb-10 sm:mb-14 relative">
+            <div class="absolute -top-10 -left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-10 backdrop-blur-sm overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none hidden md:block">
+                    <i class="fa-solid fa-microchip text-9xl text-cyan-400"></i>
+                </div>
+                
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/50 text-cyan-400 text-xs font-mono mb-4">
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        TECHNICAL DOCUMENTATION HUB
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100 tracking-tight leading-tight mb-4">
+                        Welcome to My <span class="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Project & DIY</span> Pages
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
+                        Hello! My name is <strong class="text-slate-100">Andy Tran</strong>, and I am a professional computer hardware technician and IT specialist. On these pages, I document my hands-on hardware repairs, circuit builds, and network configurations to showcase my engineering workflows and help fellow enthusiasts find the exact information needed for their own builds.
+                    </p>
+
+                    <!-- Fast Topics Quick Links -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-950/60 border border-slate-800/80">
+                            <i class="fa-solid fa-desktop text-cyan-400 text-lg"></i>
+                            <div class="text-xs">
+                                <p class="font-semibold text-slate-200">PC Hardware</p>
+                                <p class="text-slate-400">Repair, RMA & Modding</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-950/60 border border-slate-800/80">
+                            <i class="fa-solid fa-microchip text-emerald-400 text-lg"></i>
+                            <div class="text-xs">
+                                <p class="font-semibold text-slate-200">Electronics/Embedded</p>
+                                <p class="text-slate-400">Arduino, ESP32 & Power</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-950/60 border border-slate-800/80">
+                            <i class="fa-solid fa-network-wired text-indigo-400 text-lg"></i>
+                            <div class="text-xs">
+                                <p class="font-semibold text-slate-200">IT / Networking</p>
+                                <p class="text-slate-400">Switching, NAS & Servers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Category Filters -->
+        <section class="mb-8">
+            <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+                
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap items-center gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800" id="categoryFilter">
+                    <button data-category="all" class="filter-btn active px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all bg-cyan-500 text-slate-950 shadow-md">
+                        All Topics
+                    </button>
+                    <button data-category="pc-hardware" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all">
+                        <i class="fa-solid fa-desktop mr-1.5 text-xs"></i> PC Hardware
+                    </button>
+                    <button data-category="electronics" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all">
+                        <i class="fa-solid fa-microchip mr-1.5 text-xs"></i> Embedded / Electronics
+                    </button>
+                    <button data-category="networking" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-all">
+                        <i class="fa-solid fa-network-wired mr-1.5 text-xs"></i> IT & Networking
+                    </button>
+                </div>
+
+                <!-- Search Input -->
+                <div class="relative w-full md:w-72">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+                    <input type="text" id="searchInput" placeholder="Search projects or tools..." class="w-full bg-slate-900 border border-slate-800 focus:border-cyan-500 rounded-xl pl-9 pr-4 py-2 text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-cyan-500 transition-all">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Project Grid Section -->
+        <section class="space-y-12">
+            
+            <!-- SECTION 1: PC/Computer Hardware -->
+            <div class="category-block" data-category-group="pc-hardware">
+                <div class="flex items-center gap-3 pb-3 mb-6 border-b border-slate-800">
+                    <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                        <i class="fa-solid fa-desktop text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+                            PC / Computer Hardware
+                            <span class="text-xs font-mono font-normal px-2 py-0.5 rounded bg-slate-800 text-cyan-400 border border-slate-700">3 Entries</span>
+                        </h2>
+                        <p class="text-xs text-slate-400">Troubleshooting, Component Repair, Thermal Management & System Upgrades</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Hardware Project 1 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-cyan-500/5" data-title="custom liquid loop custom loop cooling thermals rma high performance" data-tags="pc-hardware">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-cyan-400 font-semibold">PROJECT #01</span>
+                                <span>BUILD & BENCH</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('pc1')" class="hover:underline">High-Performance Liquid Cooling Thermal Benchmarking</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Designing custom hard-line liquid cooling loops, executing pressure testing, and analyzing delta temperatures under sustained CPU/GPU stress workloads.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">Hard-Line Tubing</span>
+                                <span class="tech-tag">Thermal Leak Testing</span>
+                                <span class="tech-tag">FurMark / Prime95</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <a href="https://andytran-tech.github.io/prius3rdgen-infotainment-upgrade/"  class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group/btn">
+                                Read more <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Hardware Project 2 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-cyan-500/5" data-title="multilayer motherboard component level soldering oscilloscope Bios flashing rma" data-tags="pc-hardware">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-cyan-400 font-semibold">PROJECT #02</span>
+                                <span class="text-amber-400">DIAGNOSTICS</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('pc2')" class="hover:underline">Multilayer PCB Component Repair & SPI BIOS Flashing</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Repairing non-booting enterprise motherboards using oscilloscopes for power rail tracing, SMD capacitor replacement, and hardware EEPROM programmers.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">SMD Soldering</span>
+                                <span class="tech-tag">Oscilloscope</span>
+                                <span class="tech-tag">CH341A Programmer</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <a href="https://andytran-tech.github.io/prius3rdgen-infotainment-upgrade/"  class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group/btn">
+                                Read more <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Hardware Project 3 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-cyan-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-cyan-500/5" data-title="hsm banking server deployment quality control ISO precision" data-tags="pc-hardware">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-cyan-400 font-semibold">PROJECT #03</span>
+                                <span class="text-emerald-400">ENTERPRISE</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-cyan-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('pc3')" class="hover:underline">Banking Server HSM Security Integration & QC Workflow</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Integration of Hardware Security Modules (HSM) into rackmount enterprise banking servers with ISO-standard verification and initialization testing.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">Hardware Security Modules</span>
+                                <span class="tech-tag">ISO Compliance</span>
+                                <span class="tech-tag">Acumatica ERP</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <a href="https://andytran-tech.github.io/prius3rdgen-infotainment-upgrade/"  class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group/btn">
+                                Read more <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+
+            <!-- SECTION 2: Electronics / Embedded -->
+            <div class="category-block" data-category-group="electronics">
+                <div class="flex items-center gap-3 pb-3 mb-6 border-b border-slate-800">
+                    <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                        <i class="fa-solid fa-microchip text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+                            Electronics / Embedded Systems
+                            <span class="text-xs font-mono font-normal px-2 py-0.5 rounded bg-slate-800 text-emerald-400 border border-slate-700">3 Entries</span>
+                        </h2>
+                        <p class="text-xs text-slate-400">Power Electronics, Arduino Microcontrollers, ESP32 IoT & Circuit Simulations</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Embedded Project 1 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-emerald-500/5" data-title="esp32 wi-fi telemetry environment sensor embedded c iot node" data-tags="electronics">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-emerald-400 font-semibold">PROJECT #01</span>
+                                <span>Electronics</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('el1')" class="hover:underline">Toyota Prius 3rd Gen Infortainment Upgrading</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Transform your Toyota Prius 3rd Generation (2010–2015) with modern Android Auto, Apple CarPlay, and updated multimedia capabilities.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">Android Auto</span>
+                                <span class="tech-tag">Apple Carplay</span>
+                                <span class="tech-tag">Oem Backup Camera</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <a href="https://andytran-tech.github.io/prius3rdgen-infotainment-upgrade/"  class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group/btn">
+                                Read more <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Embedded Project 2 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-emerald-500/5" data-title="74hc08 logic gate tinkercad simulation digital circuit troubleshooting" data-tags="electronics">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-emerald-400 font-semibold">PROJECT #02</span>
+                                <span class="text-cyan-400">SIMULATION</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('el2')" class="hover:underline">Logic Gate IC 74HC08 Analysis & Circuit Tinkercad Modeling</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Troubleshooting pin voltage logic behavior on Quad 2-Input AND Gate ICs, simulating pull-up/pull-down resistor networks for reliable digital states.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">74HC08 AND IC</span>
+                                <span class="tech-tag">Tinkercad Circuits</span>
+                                <span class="tech-tag">Digital Logic</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <button onclick="openProjectModal('el2')" class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group/btn">
+                                Read Log <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Embedded Project 3 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-emerald-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-emerald-500/5" data-title="power electronics mosfet bjt switching dc regulator design circuit analysis" data-tags="electronics">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-emerald-400 font-semibold">PROJECT #03</span>
+                                <span class="text-amber-400">POWER ELECTRONICS</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-emerald-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('el3')" class="hover:underline">Variable Buck DC-DC Converter & MOSFET Switch Design</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Calculating inductances, power MOSFET gate drives, and diode protection loops to construct an efficient step-down DC regulator circuit.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">N-Channel MOSFET</span>
+                                <span class="tech-tag">PWM Switching</span>
+                                <span class="tech-tag">Kirchhoff's Laws</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <button onclick="openProjectModal('el3')" class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group/btn">
+                                Read Log <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+
+            <!-- SECTION 3: IT / Networking -->
+            <div class="category-block" data-category-group="networking">
+                <div class="flex items-center gap-3 pb-3 mb-6 border-b border-slate-800">
+                    <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                        <i class="fa-solid fa-network-wired text-xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+                            IT & Network Infrastructure
+                            <span class="text-xs font-mono font-normal px-2 py-0.5 rounded bg-slate-800 text-indigo-400 border border-slate-700">3 Entries</span>
+                        </h2>
+                        <p class="text-xs text-slate-400">Managed Switches, VLAN Isolation, TrueNAS Storage & Bare-Metal Cloning</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Network Project 1 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-indigo-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-indigo-500/5" data-title="managed switch vlan setup Wi-Fi isolation firewall router configuration" data-tags="networking">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-indigo-400 font-semibold">PROJECT #01</span>
+                                <span>NETWORKING</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-indigo-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('net1')" class="hover:underline">Segmented VLAN & Isolated Hardware Test Lab Network</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Configuring enterprise L2/L3 managed switches to segregate untrusted hardware testing benches from secure administrative subnets.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">802.1Q VLANs</span>
+                                <span class="tech-tag">pfSense / Router</span>
+                                <span class="tech-tag">Wi-Fi Isolation</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <button onclick="openProjectModal('net1')" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1 group/btn">
+                                Read Log <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Network Project 2 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-indigo-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-indigo-500/5" data-title="truenas truenas scale nas file server zfs RAID network storage" data-tags="networking">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-indigo-400 font-semibold">PROJECT #02</span>
+                                <span class="text-cyan-400">STORAGE</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-indigo-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('net2')" class="hover:underline">High-Availability TrueNAS Core/SCALE File Server</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Building a custom ZFS storage array featuring ZFS pool redundancy, NFS/SMB network sharing, and automated cloud backup scripts.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">TrueNAS SCALE</span>
+                                <span class="tech-tag">ZFS RAID-Z2</span>
+                                <span class="tech-tag">SMB / NFS</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <button onclick="openProjectModal('net2')" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1 group/btn">
+                                Read Log <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Network Project 3 -->
+                    <article class="project-card group bg-slate-900 border border-slate-800 hover:border-indigo-500/50 rounded-xl overflow-hidden flex flex-col justify-between transition-all hover:shadow-lg hover:shadow-indigo-500/5" data-title="clonezilla rescuezilla symantec ghost pxE boot imaging system deployment" data-tags="networking">
+                        <div class="p-5 flex-grow">
+                            <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+                                <span class="text-indigo-400 font-semibold">PROJECT #03</span>
+                                <span class="text-emerald-400">SYS ADMIN</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-100 group-hover:text-indigo-400 transition-colors mb-2">
+                                <a href="javascript:void(0)" onclick="openProjectModal('net3')" class="hover:underline">Mass OS Deployment via PXE Network Boot & Rescuezilla</a>
+                            </h3>
+                            <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                                Deploying custom Windows/Linux disk images across multiple client systems simultaneously using Clonezilla SE and network PXE booting.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="tech-tag">Clonezilla SE</span>
+                                <span class="tech-tag">PXE Server</span>
+                                <span class="tech-tag">Rescuezilla</span>
+                            </div>
+                        </div>
+                        <div class="px-5 py-3 bg-slate-950/60 border-t border-slate-800/80 flex items-center justify-between">
+                            <span class="text-xs text-slate-500 font-mono">STATUS: COMPLETED</span>
+                            <button onclick="openProjectModal('net3')" class="text-xs font-medium text-indigo-400 hover:text-indigo-300 flex items-center gap-1 group/btn">
+                                Read Log <i class="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Dynamic No Results Message -->
+        <div id="noResults" class="hidden py-16 text-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-500">
+                <i class="fa-solid fa-folder-open text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-300 mb-1">No Matching Projects Found</h3>
+            <p class="text-slate-500 text-sm">Try tweaking your search keywords or clear the category filters.</p>
+        </div>
+
+    </main>
+
+    <!-- Modal Window for Project Details -->
+    <div id="projectModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative flex flex-col">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-800 flex items-start justify-between bg-slate-950/50 sticky top-0 z-10">
+                <div>
+                    <span id="modalCategory" class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest">CATEGORY</span>
+                    <h3 id="modalTitle" class="text-xl font-bold text-slate-100 mt-1">Project Title</h3>
+                </div>
+                <button onclick="closeProjectModal()" class="p-2 text-slate-400 hover:text-slate-100 bg-slate-800/60 rounded-lg transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="p-6 space-y-6 text-slate-300 text-sm leading-relaxed" id="modalBody">
+                <!-- Content will be injected via script.js -->
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-slate-800 bg-slate-950/50 flex justify-end">
+                <button onclick="closeProjectModal()" class="px-4 py-2 text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors">
+                    Close Window
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact & Footer Section -->
+    <footer class="mt-20 border-t border-slate-800/80 bg-slate-950 text-slate-400 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-8 border-b border-slate-800/60">
+                
+                <!-- Contact Info Left -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-2 flex items-center gap-2">
+                        <span>Get In Touch</span>
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block" title="Open for Opportunities"></span>
+                    </h3>
+                    <p class="text-slate-400 text-sm max-w-md">
+                        Interested in discussing hardware engineering, server systems, or technical troubleshooting? Feel free to connect or review my complete professional resume.
+                    </p>
+                </div>
+
+                <!-- Contact Direct Buttons Right -->
+                <div class="flex flex-wrap gap-3 md:justify-end">
+                    <a href="mailto:andytran.cs@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-500/50 hover:text-cyan-400 text-slate-200 text-xs font-mono transition-all">
+                        <i class="fa-solid fa-envelope text-cyan-400"></i>
+                        <span>andytran.cs@gmail.com</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/andytrancs93" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-500/50 hover:text-cyan-400 text-slate-200 text-xs font-mono transition-all">
+                        <i class="fa-brands fa-linkedin text-cyan-400"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+
+                    <a href="tel:6262470247" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-800 hover:border-cyan-500/50 hover:text-cyan-400 text-slate-200 text-xs font-mono transition-all">
+                        <i class="fa-solid fa-phone text-cyan-400"></i>
+                        <span>(626) 247-0247</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Sub-Footer -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-slate-600"></i>
+                    <span>San Gabriel, CA | Open to Relocation / Remote</span>
+                </div>
+
+                <!-- Back to Resume Button (Bottom) -->
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="inline-flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 font-mono font-medium hover:underline">
+                        <i class="fa-solid fa-arrow-left text-xs"></i>
+                        <span>Return to Resume</span>
+                    </a>
+                    <span>&bull;</span>
+                    <p>&copy; 2026 Andy Tran. All rights reserved.</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
